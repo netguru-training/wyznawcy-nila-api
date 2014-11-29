@@ -8,7 +8,7 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  database: wyznawcy_nila_test
+  database: wyznawcy_nila_development
 
 test: &test
   <<: *defaults
