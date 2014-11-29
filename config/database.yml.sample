@@ -1,0 +1,15 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  username: root
+  password:
+
+development:
+  <<: *defaults
+  database: wyznawcy_nila_test
+
+test: &test
+  <<: *defaults
+  database: wyznawcy_nila_test
