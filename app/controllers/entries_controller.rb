@@ -41,7 +41,7 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1.json
   def update
     respond_to do |format|
-      score = entry_params[:score] > 0 ? 1 : -1
+      score = entry_params[:score].to_i > 0 ? 1 : -1
       if @entry.update(score: @entry.score + score)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @entry }
